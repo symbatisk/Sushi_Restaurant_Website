@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style_menu.css">
+    <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Header Section-->
+    <header class="header" id="fixHeader">
+        <div class="container">
+            
+            <div id="header-placeholder"></div>
+            
+            <div class="subhead">  <!--Second Navigation-->
+                <nav class="sub_nav">
+                    <a class="sub_nav_link" href="#side_part">Sides</a>
+                    <a class="sub_nav_link" href="#main_part">Sushi</a>
+                    <a class="sub_nav_link" href="#set_part">Sets</a>
+                    <a class="sub_nav_link" href="#salad_part">Salads</a> 
+                    <hr>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+        
+     <!--Sides part-->
+    <div id="side_part">
+        <div class="container">
+            <h2 class="logo">Side</h2>
+             <!--Block Section for Products-->
+            <div class="block_container">
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/Rice.png" alt="" width="100%">
+                    <p>Rice</p>
+                    <div class="ingredient">  <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Boiled Rice</p>   
+                    </div>
+                    <div class="pricing_data">  <!--Price Section-->
+                        <h1 class="price">3.95p</h1>
+                        <div class="number">  <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/Spinach.png" alt="" width="100%">
+                    <p>Spinach Ohitashi</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Fresh spinach, soy sauce, mirin, dashi, optional: sesame seeds</p>   
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">3.95p</h1> 
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/tofuside.png" alt="" width="100%">
+                    <p>Teryaki Tofu</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Firm tofu, soy sauce, mirin, sugar, garlic (optional), ginger (optional), cornstarch, vegetable oil</p>   
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">4.95p</h1> 
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Main part-->
+    <div id="main_part">
+        <div class="container">
+            <h2 class="logo">Sushi</h2>
+                <div class="block_container">  <!--Block Section for Products-->
+                    <div class="block_item">
+                        <img class="imag" src="Images/Menu/sushi1.jpg" alt="" width="100%">
+                        <p>Dragon Roll</p>
+                        <div class="ingredient"> <!--Ingredient Section-->
+                            <div class="bord">10pcs</div>
+                            <p class="ing_text">Grilled eel, avocado, cucumber, nori,rice, eel sauce.</p>   
+                        </div>
+                        <div class="pricing_data"> <!--Price Section-->
+                            <h1 class="price">21.25£</h1>
+                            <div class="number"> <!--The quantity of the product-->
+                                <button onclick="changeNumber(this, 'decrement')">-</button>
+                                <input type="number" class="numberInput" value="0">
+                                <button onclick="changeNumber(this, 'increment')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_item">
+                        <img class="imag" src="Images/Menu/sushi4.png" alt="" width="100%">
+                        <p>Rainbow Roll</p>
+                        <div class="ingredient"> <!--Ingredient Section-->
+                            <div class="bord">10pcs</div>
+                            <p class="ing_text">Crab stick, avocado, cucumber, assorted fish, nori,rice,</p>   
+                        </div>
+                        <div class="pricing_data"> <!--Price Section-->
+                            <h1 class="price">17.95£</h1>
+                            <div class="number"> <!--The quantity of the product-->
+                                <button onclick="changeNumber(this, 'decrement')">-</button>
+                                <input type="number" class="numberInput" value="0">
+                                <button onclick="changeNumber(this, 'increment')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_item">
+                        <img class="imag" src="Images/Menu/sushi2.jpg" alt="" width="100%">
+                        <p>Spicy Tuna Roll</p>
+                        <div class="ingredient"> <!--Ingredient Section-->
+                            <div class="bord">10pcs</div>
+                            <p class="ing_text">Fresh tuna, spicy mayo, cucumber, nori,rice</p>
+                            
+                        </div>
+                        <div class="pricing_data"> <!--Price Section-->
+                            <h1 class="price">20£</h1>
+                            <div class="number"> <!--The quantity of the product-->
+                                <button onclick="changeNumber(this, 'decrement')">-</button>
+                                <input type="number" class="numberInput" value="0">
+                                <button onclick="changeNumber(this, 'increment')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+    <!--Set Part-->
+    <div id="set_part">
+        <div class="container">
+            <h2 class="logo">Sets</h2>
+            <div class="block_container">  <!--Block Section for Products-->
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/setblack.png" alt="" width="100%">
+                    <p>Sushi Sampler Platter</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">20£cs</div>
+                        <p class="ing_text">California rolls, tuna rolls, salmon rolls, and shrimp rolls</p>
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">24£</h1>
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/setbrown.png" alt="" width="100%">
+                    <p>Chef's Special Sushi Selection</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">35pcs</div>
+                        <p class="ing_text">Dragon Rolls, Rainbow Rolls, and Volcano Rolls, along with some nigiri sushi like salmon nigiri and tuna nigir</p>
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">30.99£</h1>
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/sets.png" alt="" width="100%">
+                    <p>Deluxe Sashimi Assortment</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">50pcs</div>
+                        <p class="ing_text">A grand assortment featuring various sushi rolls, nigiri, and sashimi, resembling a boat's arrangement.</p>
+                </div>
+                <div class="pricing_data"> <!--Price Section-->
+                    <h1 class="price">35.49£</h1>
+                    <div class="number"> <!--The quantity of the product-->
+                        <button onclick="changeNumber(this, 'decrement')">-</button>
+                        <input type="number" class="numberInput" value="0">
+                        <button onclick="changeNumber(this, 'increment')">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <!--Salad Part -->
+    <div id="salad_part">
+        <div class="container">
+            <h2 class="logo">Salad</h2>
+            <div class="block_container">  <!--Block Section for Products-->
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/Potatosalad.png" alt="" width="100%">
+                    <p>Gomaae</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Blanched spinach, sesame seeds, soy sauce, sugar, mirin, sesame oil (optional)
+                        </p>
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">4.95£</h1>
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/Salad.png" alt="" width="100%">
+                    <p>Sunomono</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Cucumbers, rice vinegar, sugar, soy sauce, salt, optional: seafood (shrimp, crab, octopus), seaweed
+                        </p>
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">24£</h1>
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_item">
+                    <img class="imag" src="Images/Menu/salad3.png" alt="" width="100%">
+                    <p>Wakame Salad</p>
+                    <div class="ingredient"> <!--Ingredient Section-->
+                        <div class="bord">1pcs</div>
+                        <p class="ing_text">Wakame seaweed, rice vinegar, soy sauce, sugar, sesame oil, sesame seeds, optional: cucumber, carrots, radishes</p>
+                    </div>
+                    <div class="pricing_data"> <!--Price Section-->
+                        <h1 class="price">24£</h1>
+                        <div class="number"> <!--The quantity of the product-->
+                            <button onclick="changeNumber(this, 'decrement')">-</button>
+                            <input type="number" class="numberInput" value="0">
+                            <button onclick="changeNumber(this, 'increment')">+</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-contant">
+                        <h1>GrandRestaurant</h1>
+                        <p style="color: white;">Discover fresh sushi delights with authentic flavors. Reserve your table for an unforgettable culinary experience today. Immerse yourself in the serene ambiance and attentive service for an unforgettable Japanese dining.</p>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Our Service</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="about_us.html">About Us</a>
+                            <a class="nav_link_footer" href="#">Our Work</a>
+                            <a class="nav_link_footer" href="#">Help Center</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Company</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Terms of Use</a>
+                            <a class="nav_link_footer" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Follow Us</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Facebook</a>
+                            <a class="nav_link_footer" href="#">Instagram</a>
+                            <a class="nav_link_footer" href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+            
+    
+    <!-- В конец body -->
+<script type="module" src="js/cart.js"></script> 
+<script type="module" src="js/menu.js"></script>
+<script  type="module" src="auth/auth.js"></script>
+   
+</body>
+</html>

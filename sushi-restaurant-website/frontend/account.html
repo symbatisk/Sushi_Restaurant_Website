@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account - Order History</title>
+    <link rel="stylesheet" href="Css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="auth/auth.css">
+     <link rel="stylesheet" href="Css/cart.css">
+</head>
+<body>
+    <!--Header content-->
+     <header>
+        <div class="header">
+            <div class="container">
+                <div id="header-placeholder"></div>
+            </div>
+        </div>
+    </header> 
+    <!-- Main container for the account page -->
+    <div class="account-container">
+        <!-- Sidebar navigation -->
+        <div class="account-sidebar">
+            <!-- User profile section -->
+            <div class="user-profile">
+                <div class="user-avatar">BM</div>
+                <div id="user-name" class="user-name"></div>
+                <div id="user-email" class="user-email"></div>
+
+            </div>
+            
+            <!-- Navigation menu -->
+            <ul class="account-menu">
+                <li><a href="#order-history" class="active"><i class="fas fa-history"></i> Order History</a></li>
+                <li><a href="#addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                <li><a href="#payment-details"><i class="fas fa-credit-card"></i> Payment Details</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="account-content">
+            <!-- Order History Section -->
+            <div id="order-history" class="content-section active">
+                <h2 class="section-title">Order History</h2>
+                <div id="orders-container">
+                     <p>Loading orders...</p>
+                </div>
+            </div>
+            <div id="order-examples" class="hidden">
+                    <div class="order-card example">
+                        <div class="order-summary">
+                            <div class="order-basic-info">
+                                <div class="order-id">Order #EX-12345</div>
+                                <div class="order-date">15/10/2023</div>
+                                <div class="order-status delivered">Delivered</div>
+                                <div class="order-total">£42.50</div>
+                            </div>
+                            <div class="order-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="order-details">
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <div class="item-image">
+                                        <img src="Images/Menu/sushi1.jpg" alt="Sushi Platter">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-name">Sushi Platter Deluxe</div>
+                                        <div class="item-attributes">12 pieces, mixed selection</div>
+                                        <div class="item-price">£14.99</div>
+                                    </div>
+                                    <div class="item-quantity">Qty: 1</div>
+                                    <div class="item-total">£14.99</div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="item-image">
+                                        <img src="Images/Menu/setbrown.png" alt="Sushi set">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-name">Sushi set</div>
+                                        <div class="item-attributes">12 pieces, mixed selection</div>
+                                        <div class="item-price">£22.50</div>
+                                    </div>
+                                    <div class="item-quantity">Qty: 1</div>
+                                    <div class="item-total">£22.50</div>
+                                </div>
+                                <div class="order-item">
+                                    <div class="item-image">
+                                        <img src="Images/Menu/Rice.png" alt="Rice">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-name">Rice</div>
+                                        <div class="item-price">£3.50</div> 
+                                    </div>
+                                    <div class="item-quantity">Qty: 1</div>
+                                    <div class="item-total">£3.50</div>
+                                </div>
+                            </div>
+                            <div class="order-info">
+                                <div class="shipping-info">
+                                    <h4>Shipping Address</h4>
+                                    <p>
+                                        John Smith<br>
+                                        123 Example Street<br>
+                                        London<br>
+                                        SW1A 1AA<br>
+                                        United Kingdom<br>
+                                        Phone: +44 1234567890
+                                    </p>
+                                </div>
+                                <div class="payment-info">
+                                    <h4>Payment Method</h4>
+                                    <p>
+                                        Visa ending in 1234<br>
+                                        Paid on 15/10/2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="delivery-timeline">
+                                <h4>Delivery Timeline</h4>
+                                <div class="timeline">
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">Order Placed</div>
+                                            <div class="timeline-date">15/10/2023 18:30</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">Out for Delivery</div>
+                                            <div class="timeline-date">15/10/2023 19:15</div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-title">Delivered</div>
+                                            <div class="timeline-date">15/10/2023 19:45</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="delete-order-btn">Delete Order</button>
+                        </div>
+                    </div>
+                    <div class="order-card example">
+                        <div class="order-summary">
+                            <div class="order-basic-info">
+                                <div class="order-id">Order #EX-67890</div>
+                                <div class="order-date">10/10/2023</div>
+                                <div class="order-status delivered">Delivered</div>
+                                <div class="order-total">£35.75</div>
+                            </div>
+                            <div class="order-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            
+            <!-- Addresses Section -->
+            <div id="addresses" class="content-section">
+                <h2 class="section-title">Your Addresses</h2>
+                <div id="address-list" class="address-grid">
+                    <!-- Addresses will be loaded here dynamically -->
+                </div>
+                <div id="address-examples" class="hidden">
+                    <div class="address-card example">
+                        <span class="address-type">Home</span>
+                        <div class="address-name">John Smith</div>
+                        <div class="address-details">
+                            123 Example Street<br>
+                            London<br>
+                            SW1A 1AA<br>
+                            United Kingdom<br>
+                            Phone: +44 1234567890
+                        </div>
+                        <div class="address-actions">
+                            <button class="address-btn">Edit</button>
+                            <button class="address-btn">Remove</button>
+                        </div>
+                    </div>
+                    
+                    <div class="address-card example">
+                        <span class="address-type">Work</span>
+                        <div class="address-name">John Smith</div>
+                        <div class="address-details">
+                            456 Business Avenue<br>
+                            Office 302<br>
+                            London<br>
+                            EC1A 1BB<br>
+                            United Kingdom<br>
+                            Phone: +44 9876543210
+                        </div>
+                        <div class="address-actions">
+                            <button class="address-btn">Edit</button>
+                            <button class="address-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="add-address-btn" class="save-btn" style="margin-top: 20px;">+ Add New Address</button>
+            </div>
+  
+            
+            <!-- Address Popup -->
+            <div id="address-popup" class="popup hidden">
+                <div class="popup-content">
+                    <h3 id="popup-title">Add Address</h3>
+                    <form id="address-form">
+                        <input type="hidden" id="address-id">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-line1">Address Line 1</label>
+                            <input type="text" id="address-line1" placeholder="Street address, P.O. box" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-line2">Address Line 2</label>
+                            <input type="text" id="address-line2" placeholder="Apartment, suite, unit, building, floor, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="City" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" placeholder="Postcode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="is-default">
+                                <input type="checkbox" id="is-default"> Set as default address
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">Save Address</button>
+                            <button type="button" id="cancel-popup" class="save-btn" style="background-color: #666;">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                        
+            <!-- Payment Details Section -->
+           <div id="payment-details" class="content-section">
+                <h2 class="section-title">Payment Methods</h2>
+                <div id="payment-methods-container">
+                    <!-- Payment methods will be loaded here dynamically -->
+                </div>
+                <div id="payment-examples" class="hidden">
+                    <div class="payment-card example">
+                        <div class="payment-info">
+                            <div class="payment-icon">
+                                <i class="fab fa-cc-visa"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div>Visa ending in 1234</div>
+                                <div>Expires 12/2024</div>
+                            </div>
+                        </div>
+                        <div class="payment-actions">
+                            <button class="address-btn">Edit</button>
+                            <button class="address-btn">Remove</button>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card example">
+                        <div class="payment-info">
+                            <div class="payment-icon">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </div>
+                            <div class="payment-details">
+                                <div>Mastercard ending in 5678</div>
+                                <div>Expires 06/2025</div>
+                            </div>
+                        </div>
+                        <div class="payment-actions">
+                            <button class="address-btn">Edit</button>
+                            <button class="address-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="save-btn" id="add-payment-btn">Add New Payment Method</button>
+            </div>
+            
+            <!-- Payment Method Popup -->
+            <div id="payment-popup" class="popup hidden">
+                <div class="popup-content">
+                    <h3 id="payment-popup-title">Add Payment Method</h3>
+                    <form id="payment-form">
+                        <input type="hidden" id="payment-id">
+                        <div class="form-group">
+                            <label for="card-type">Type</label>
+                            <select id="card-type" required>
+                                <option value="">Select Type</option>
+                                <option value="credit">Credit Card</option>
+                                <option value="debit">Debit Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-brand">Brand</label>
+                            <select id="card-brand" required>
+                                <option value="">Select Brand</option>
+                                <option value="Visa">Visa</option>
+                                <option value="MasterCard">MasterCard</option>
+                                <option value="American Express">American Express</option>
+                                <option value="Discover">Discover</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-last4">Last 4 Digits</label>
+                            <input type="text" id="card-last4" maxlength="4" pattern="[0-9]{4}" placeholder="1234" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-exp-month">Expiration Month</label>
+                            <input type="text" id="card-exp-month" maxlength="2" pattern="[0-9]{2}" placeholder="MM" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-exp-year">Expiration Year</label>
+                            <input type="text" id="card-exp-year" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">Save</button>
+                            <button type="button" id="cancel-payment-popup" class="save-btn" style="background-color: #666;">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Settings Section -->
+            <div id="settings" class="content-section">
+                <h2 class="section-title">Account Settings</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="settings-name" value="Burk Macklin">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="settings-email"  value="ahc@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" value="00923469874656">
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option>English</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                        </select>
+                    </div>
+                    <button id="save-settings" class="save-btn">Save Changes</button>
+                </div>
+            </div>
+            
+            <!-- Logout Section -->
+            <div id="logout" class="content-section">
+                <h2 class="section-title">Log Out</h2>
+                <p>Are you sure you want to log out?</p>
+                <button class="save-btn" style="background-color: #666; margin-top: 20px;">Log Out</button>
+            </div>
+        </div>
+    </div>
+          <!--Footer Section-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-contant">
+                        <h1>GrandRestaurant</h1>
+                        <p>Discover fresh sushi delights with authentic flavors. Reserve your table for an unforgettable culinary experience today. Immerse yourself in the serene ambiance and attentive service for an unforgettable Japanese dining.</p>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Our Service</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="about_us.html">About Us</a>
+                            <a class="nav_link_footer" href="#">Our Work</a>
+                            <a class="nav_link_footer" href="#">Help Center</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Company</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Terms of Use</a>
+                            <a class="nav_link_footer" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Follow Us</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Facebook</a>
+                            <a class="nav_link_footer" href="#">Instagram</a>
+                            <a class="nav_link_footer" href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   <script src="js/account.js"></script>
+    <script type="module" src="auth/auth.js"></script>
+</body>
+</html>

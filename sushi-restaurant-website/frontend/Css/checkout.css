@@ -1,0 +1,692 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f8f9fa;
+  font-family: 'Cinzel', serif;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header, .header a, nav {
+  color: #000 !important;
+}
+
+/* Page layout */
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.checkout-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.checkout-form {
+  flex: 3;
+}
+
+.order-summary {
+  flex: 2;
+}
+
+/* Card blocks */
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Form styling */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f9f9f9;
+  font-size: 16px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Payment section */
+.payment-method {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-method input {
+  width: auto;
+}
+
+/* Cart styling */
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.badge {
+  background: #8B0000;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 8px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cart-item-desc {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+.promo-code {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.promo-code-row {
+  display: flex;
+  gap: 10px;
+}
+
+.promo-code-row input {
+  flex: 1;
+}
+
+.promo-code-row button {
+  padding: 0 15px;
+  background: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+}
+
+.summary-line.total {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 15px;
+  border-bottom: none;
+}
+
+/* Buttons */
+.confirm-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #8B0000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.confirm-btn:hover {
+  background: #a30000;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  min-height: 150px;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 100px;;
+}
+
+.footer-inner{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contant{
+  width: 40%;
+}
+.link-title{
+  color: gray;
+}
+
+.nav_link_footer{
+  color:#fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+/* Overlay background */
+.order-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* make sure it's on top of everything */
+}
+
+/* Success modal */
+.order-success {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Buttons inside modal */
+.order-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.order-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+#viewOrderHistory {
+  background-color: #007bff;
+  color: white;
+}
+
+#viewOrderHistory:hover {
+  background-color: #0056b3;
+}
+
+#goHome {
+  background-color: #28a745;
+  color: white;
+}
+
+#goHome:hover {
+  background-color: #1e7e34;
+}
+
+/* Billing address toggle */
+.billing-address {
+  display: none;
+  margin-top: 20px;
+}
+
+.billing-address.active {
+  display: block;
+}
+
+/* Phone input UK formatting */
+input[name="phone"] {
+  padding-left: 60px; /* чтобы поместился +44 */
+  position: relative;
+}
+
+.phone-wrapper {
+  position: relative;
+}
+
+.phone-wrapper::before {
+  content: "+44";
+  position: absolute;
+  left: 5px;
+  top: 30px;
+  background: #f5f5f5;
+  padding: 0 5px;
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.phone-wrapper input {
+  padding-left: 45px;
+}
+
+.address-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.address-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.address-card:hover {
+  border-color: #8B0000;
+}
+
+.address-card.selected {
+  border: 2px solid #8B0000;
+  background-color: #fff8f8;
+}
+
+.address-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.address-buttons button {
+  padding: 10px 15px;
+  background: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.address-buttons button:hover {
+  background: #a30000;
+}
+
+.address-card.selected {
+  border: 2px solid #8B0000;
+  background-color: #fff8f8;
+}
+
+
+#addressForm {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .checkout-wrapper {
+    flex-direction: column;
+  }
+  
+  .checkout-form,
+  .order-summary {
+    flex: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .payment-method {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .address-card {
+    width: 100%;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-contant, .footer-nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .checkout-title {
+    font-size: 24px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .payment-method {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cart-item-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .cart-item-details {
+    flex: 2;
+  }
+  
+  .cart-item-name {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .cart-item-desc {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+  
+  .cart-item-price {
+    font-size: 14px;
+  }
+  
+  .promo-code {
+    padding: 10px;
+    margin: 15px 0;
+  }
+  
+  .promo-code-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .promo-code-row button {
+    padding: 10px;
+  }
+  
+  .summary-line {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  
+  .summary-line.total {
+    font-size: 18px;
+  }
+  
+  .address-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .address-card {
+    width: 100%;
+    padding: 12px;
+  }
+  
+  .address-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .address-buttons button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  #addressForm {
+    padding: 15px;
+    margin-top: 15px;
+  }
+  
+  .phone-wrapper::before {
+    top: 24px;
+    height: 34px;
+  }
+  
+  .confirm-btn {
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .order-success {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .order-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .order-actions button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-container {
+    padding: 0 15px;
+  }
+  
+  .checkout-title {
+    font-size: 22px;
+  }
+  
+  .card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+  }
+  
+  input, select {
+    padding: 12px;
+    font-size: 14px;
+  }
+  
+  .cart-header h3 {
+    font-size: 16px;
+  }
+  
+  .badge {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .cart-item-image {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .summary-line {
+    font-size: 14px;
+  }
+  
+  .summary-line.total {
+    font-size: 16px;
+  }
+  
+  .footer {
+    margin-top: 50px;
+    padding-top: 15px;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-contant {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .footer-nav {
+    width: 100%;
+  }
+  
+  .nav_link_footer {
+    padding: 8px;
+  }
+}
+

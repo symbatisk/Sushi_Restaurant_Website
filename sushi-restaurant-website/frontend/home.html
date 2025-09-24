@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style_home.css">
+    <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="auth/auth.css">
+
+    <title>Restorant</title>
+</head>
+<body>
+
+    <header class="header"> <!--Header Section-->
+        <div class="container">
+            <div id="header-placeholder"></div>
+            <div class="logo"> <!-- Content in Header-->
+                <div class="container">
+                    <div class="logo_inner">
+                        <h1 class="logo_title">GrandRestaurant</h1>
+                        <p class="logo_subtitle">Discover a world of flavor with our sushi! <br>Dive into the pleasure of fresh ingredients and unique combinations. Order now and turn your ordinary day into a celebration of taste!</p>
+                        <div class="button_container">
+                            <a href="menu.html" class="button">Get Start</a>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--About Us Section-->
+    <section class="about_us">
+        <div class="container">
+            <div class="about_us_items">
+                <h1 class="about_title">About us</h1>
+                <h3 class="about_subtitle">Step into the world of sushi, where tradition meets innovation and every bite is a symphony of flavors. Nestled in the heart of the city, our restaurant invites you to embark on a gastronomic adventure like no other.
+                    As you enter, you are greeted by the gentle hum of conversation and the tantalizing aroma of freshly prepared sushi. <a style="color: brown; font-size: 25px; text-decoration: none; font-weight: 700;" href="about_us.html">Read more...</a></h3>
+            </div>
+
+            <div class="about_us_items">
+                <img class="parallax" alt="sushi" src="Images/home_page_aboutus.png" style="width: 100%;" >
+            </div>
+        </div>
+    </section>
+
+    <!--Sales Section-->
+    <section class="sales">
+        <div class="container">
+            <h1 class="sales_head">Up to 25% off - Meal Deals</h1>
+            <h4 class="sales_title">Need a midweek pick-me-up, a break from cooking for the family or just fancy your favourite restaurant?</h4>
+            <p class="sales_subtitle">So <button  id="signupButtonSale" onclick="openSignupModal()" >Sign Up</button> and get your discount!</p>
+        </div>
+
+    </section>
+
+    <!--Support Section-->
+    <div class="support">
+        <div class="container">
+            <div class="support-item">
+                <h1 class="support-title">Award-Winning Customer Support If You Need It</h1>
+                <h3 class="support-text">We're here to ensure your sushi delivery experience is smooth and satisfying. If you encounter any issues with your order or have questions about our menu,
+                    delivery process, or payment options, please don't hesitate to reach out. Our dedicated support team is available around the clock to assist you. You can <a href="contact.html" style="color: brown; font-weight: 700; text-decoration: none;">Contact Us</a>!
+                    Your satisfaction is our priority, and we're committed to delivering excellence with every order.</h3>
+            </div>
+            <div class="support-item">
+                <!--Change Image size Section-->
+                <img id="imag-change" src="Images/sushi_team.jpeg" alt="Team" style="width: 100%;">
+                <div id="ChangeImgModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-cont" id="img01" src="Images/sushi_team.jpeg" alt="Team">
+                    <div id="caption">Team</div>
+                </div>
+
+            </div>
+            <div class="support-mobile">
+            <h1 class="support-title">Award-Winning Customer Support</h1>
+            <img src="Images/sushi_team.jpeg" alt="Team">
+            <h3 class="support-text">We're here to ensure your sushi delivery experience is smooth and satisfying. Our dedicated support team is available around the clock to assist you. <a href="contact.html" style="color: brown; font-weight: 700; text-decoration: none;">Contact Us</a> for any questions or issues!</h3>
+        </div>
+        </div>
+
+    </div>
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-contant">
+                        <h1>GrandRestaurant</h1>
+                        <p>Discover fresh sushi delights with authentic flavors. Reserve your table for an unforgettable culinary experience today. Immerse yourself in the serene ambiance and attentive service for an unforgettable Japanese dining.</p>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Our Service</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="about_us.html">About Us</a>
+                            <a class="nav_link_footer" href="#">Our Work</a>
+                            <a class="nav_link_footer" href="#">Help Center</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Company</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Terms of Use</a>
+                            <a class="nav_link_footer" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Follow Us</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Facebook</a>
+                            <a class="nav_link_footer" href="#">Instagram</a>
+                            <a class="nav_link_footer" href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="auth/auth.js"></script>
+    <script src="js/home.js"></script>
+    <script>
+    function openSignupModal() {
+        document.getElementById('signupModal').style.display = 'block';
+    }
+      
+    document.addEventListener('DOMContentLoaded', function() {
+        const signupLink = document.getElementById('openSignupModalLink');
+        if (signupLink) {
+            signupLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openSignupModal();
+            });
+        }
+    });
+    </script>
+</body>
+</html>

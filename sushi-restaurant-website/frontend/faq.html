@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style_faq.css">
+    <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="auth/auth.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <header> <!--Header Section-->
+        <div class="header">
+            <div class="container">
+                <div id="header-placeholder"></div>
+                <div class="head_content">
+                    <div class="container"> <!--Content in Header-->
+                        <div class="content_info">
+                            <h1 class="content_title">How can we help you?</h1>
+                            <h4 class="content_text">Learn more about our service and helpful tips for ordering sush</h3>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </header>
+    
+    <!--FAQ Section-->
+    <div class="accord-block">
+        <div class="container">
+            <!--FAQ Items-->
+        <button class="accordion">What is the estimated delivery time for sushi orders?</button>
+        <div class="panel">
+            <p>The delivery time for sushi orders depends on the location and the current workload of the restaurant. Usually, we aim to deliver orders within 30-60 minutes after they are placed. 
+            However, during peak hours or holidays, delivery times may be slightly longer. We strive to process all orders promptly and deliver them as quickly as possible while maintaining the quality of the dishes.</p>
+        </div>
+
+        <button class="accordion">What types of sushi are offered on your menu?</button>
+        <div class="panel">
+            <p>Our menu features a wide selection of sushi, including classic rolls, nigiri, sashimi, sets, and specialty rolls. We also offer vegetarian and vegan sushi options to cater to the needs of all our customers.</p>
+        </div>
+
+        <button class="accordion">Do you have any special offers or promotions for specific dishes?</button>
+        <div class="panel">
+            <p>We regularly run various promotions and offers for our customers. These may include discounts on specific types of sushi, gifts with orders, or special combo deals. 
+                To stay informed about all our promotions, you can subscribe to our newsletter or follow us on social media.</p>
+        </div>
+
+        <button class="accordion">How can I find out the ingredients of a particular sushi roll or dish?</button>
+        <div class="panel">
+            <p>Information about the ingredients of each roll or dish is available on our website or in the ordering app.
+            You can find a complete description of the ingredients and information about possible allergens.
+            If you have any special requirements regarding the ingredients of dishes, please contact our operator when placing your order.</p>
+        </div>
+
+        <button class="accordion">What are the payment terms and options for ordering online?</button>
+        
+        <div class="panel">
+            <p>We offer various payment methods for ordering, including online payment by credit card through our secure payment system, cash payment upon delivery, or payment via electronic wallets.
+            When placing an order, you can choose the most convenient payment option for you.</p>
+        </div>
+    </div>
+    </div>
+    
+
+    <!--Footer Section-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-contant">
+                        <h1>GrandRestaurant</h1>
+                        <p>Discover fresh sushi delights with authentic flavors. Reserve your table for an unforgettable culinary experience today. Immerse yourself in the serene ambiance and attentive service for an unforgettable Japanese dining experience in the heart of the city.</p>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Our Service</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="about_us.html">About Us</a>
+                            <a class="nav_link_footer" href="#">Our Work</a>
+                            <a class="nav_link_footer" href="#">Help Center</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Company</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Terms of Use</a>
+                            <a class="nav_link_footer" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Follow Us</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Facebook</a>
+                            <a class="nav_link_footer" href="#">Instagram</a>
+                            <a class="nav_link_footer" href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var accord = document.getElementsByClassName("accordion");
+        var i;
+
+        for(i = 0; i < accord.length; i++)  {
+            accord[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display  = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <script type="module" src="auth/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+body{
+    max-width: 100%;
+    margin: 0;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    background-color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*Header Section*/
+.header{
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("../Images/About_us_head.jpg") center
+    no-repeat;
+    background-size: cover;
+   
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight:700;
+    align-items: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+/*Navigation Section*/
+
+
+/*Head Content*/
+.head_content{
+    padding-top: 20%;
+    color: aliceblue;
+    justify-content: center;
+}
+.head_title {
+    font-weight: 700;
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+.head_subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/*Our History Section*/
+
+.our_history::after {
+    max-width: 100%;
+    max-height: 80vh;
+    content: "";
+    display:table;
+    clear: both;
+    margin-bottom: 30px;
+}
+.history_items{
+    float: left;
+    width: 50%;
+    padding-top: 30px;
+    padding: 25px;
+}
+
+.history_title{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: brown;
+}
+.history_subtitle{
+    font-family: "Intel";
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+/*Our Philosofy Section*/
+
+.our_philosofy{
+    margin-top: 50px;
+    width: 100%;
+    max-height: 80vh;
+    display: table;
+    clear: both;
+}
+
+.phil_items{
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+.phil_title{
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    color: brown;
+}
+
+.phil_subtitle{
+    font-size: 1.5rem;
+    font-family: "Intel";
+    color: black;
+}
+
+/*Our Team Section*/
+.our_team{
+    width: 100%;
+    max-height: 100vh;
+    display: table;
+    clear: both;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.team_title{
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: brown;
+}
+.team_items{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+/*Footer Section*/
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    min-height: 150px;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.footer-inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    
+}
+
+.footer-contant{
+    width: 40%;
+}
+.link-title{
+    color: gray;
+}
+
+.nav_link_footer{
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+  .history_items, .phil_items {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 60vh;
+  }
+  
+  .head_title {
+    font-size: 2.2rem;
+  }
+  
+  .head_subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .history_items, .phil_items {
+    width: 100%;
+    float: none;
+  }
+  
+  .team_items {
+    width: 50%;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-contant, .footer-nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-column {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 50vh;
+  }
+  
+  .head_content {
+    padding-top: 12%;
+  }
+  
+  .head_title {
+    font-size: 1.8rem;
+  }
+  
+  .head_subtitle {
+    font-size: 1rem;
+  }
+  
+  .history_title, .phil_title {
+    font-size: 1.8rem;
+  }
+  
+  .history_subtitle, .phil_subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .team_title {
+    font-size: 2rem;
+  }
+  
+  .team_items {
+    width: 100%;
+    float: none;
+  }
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-column {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  /* .header {
+    height: 50vh;
+  } */
+  .head_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 35px;
+  }
+  
+  .head_title {
+    font-size: 1.5rem;
+  }
+  .head_subtitle{
+    font-size: 1rem;
+  }
+  
+  /* .heading {
+    font-size: 2rem;
+  } */
+  .our_history::after{
+    margin-bottom: 10px;
+  }
+  .history_items {
+    padding-top: 10px;
+  }
+  
+  .history_title, .phil_title {
+    font-size: 1.6rem;
+  }
+  
+  .history_subtitle, .phil_subtitle {
+    font-size: 1rem;
+  }
+  
+  .team_title {
+    font-size: 1.8rem;
+  }
+  
+  .footer {
+    min-height: auto;
+  }
+  .footer-contant { display: none; }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .nav-column {
+    width: 100%;
+    margin: 15px 0;
+  }
+}

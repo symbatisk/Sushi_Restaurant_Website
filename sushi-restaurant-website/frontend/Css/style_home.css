@@ -1,0 +1,610 @@
+body {
+  max-width: 100%;
+  margin: 0;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  background-color:white;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*Header Section*/
+.header{
+  width: 100%;
+  height: 100vh;
+  background:
+  url("../Images/home_page_welcome.jpg") center
+  no-repeat;
+  background-size: cover;
+
+}
+/*Navigation Section*/
+/* .intro{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+} */
+/* .heading {
+  font-size: 3rem;
+  font-weight:100;
+} */
+
+/*Content in Header*/
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+.logo_inner{
+  width: 100%;
+  max-width: 600px;
+  padding-left: 20px;
+}
+.logo_title{
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.logo_subtitle{
+  font-family:'Intel';
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.button_container{
+  /* padding-left: 250px;
+  align-items: center; */
+  text-align: center;
+  padding-left: 0;
+  width: 100%;
+  margin-top: 20px;
+
+}
+.button {
+  display: inline-block;
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+.button:hover {
+  background-color: rgb(91, 21, 21);
+}
+
+/*Sign Up Section*/
+/* input[type=text], input[type=password], input[type=email], input[type=number] {
+  width: 90%;
+  padding: 25px;
+  margin: 5px 0 22px 0;
+  display:list-item;
+  border: none;
+  border-radius: 12px ;
+  background: #f1f1f1;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+#signupButton {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: 20%;
+  font-size: 1rem;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: black;
+}
+.signupbtn{
+  padding: 14px 20px;
+  background-color: brown;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  color: white;
+  border-radius: 8px;
+  border: solid;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  align-items: center;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0, 0.6); 
+  padding-top: 50px;
+  color: black;
+
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 3% auto 20% auto;
+  border: 2px solid #888;
+  width: 40%;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 10px;
+
+}
+
+
+Validation Section
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding-left: 15px;
+  margin-top: 3px;
+}
+
+#message p {
+  padding: 10px 25px;
+  font-size: 1rem;
+}
+.valid {
+  color: green;
+}
+
+.valid::before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid::before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+} */
+
+/*About Us Section*/
+
+.about_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background-color: #fff;
+  overflow: hidden; 
+}
+
+.about_us_items{
+  float: left;
+  width: 50%;
+  padding-top: 10px;
+}
+
+.parallax{
+  padding-left: 45px;
+  margin-top: 95px;
+  transform: scale(1.45);
+
+}
+
+.about_title{
+  color: brown;
+  font-size: 3rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
+  
+}
+.about_subtitle{
+  color: rgb(102, 101, 101);
+  font-family:'Intel';
+  font-size: 1.5rem;
+  text-align: center;
+  /* font-weight: 100; */
+}
+
+/*Sales Section*/
+.sales {
+  background-color: black;
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.sales_head{
+  font-weight: 800;
+  font-size: 4rem;
+}
+
+.sales_title{
+  font-size: 2.2rem;
+  font-family:"Intel";
+}
+
+.sales_subtitle {
+  font-size: 1.5rem;
+  font-family:"Intel";
+}
+
+#signupButtonSale {
+  background-color: brown;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: 10%;
+  font-size: 1rem;
+}
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.close:hover,
+.close:focus {
+  color: brown;
+  cursor: pointer;
+}
+
+/* Change Image size Section*/
+.modal-cont {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.modal-cont, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/*Support Section*/
+.support{
+  width: 100%;
+  height: 60vh;
+  display: table;
+  clear: both;
+  background-color: #fff;
+  padding-top: 40px;
+}
+.support-item{
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+
+.support-title{
+  font-size: 2.8rem;
+  color: brown;
+  font-weight: 700;
+}
+
+.support-text{
+  color:  rgb(102, 101, 101);
+}
+
+/*Footer Section*/
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  /* height: 22vh; */
+  min-height: 150px;
+  text-align: center;
+  padding-top: 20px;
+}
+.footer-inner{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.footer-contant{
+  width: 40%;
+}
+.link-title{
+  color: gray;
+}
+
+.nav_link_footer{
+  color:#fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.support-mobile {
+  display: none;
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+  .about_us_items {
+    width: 45%;
+  }
+  .parallax {
+    transform: scale(1.45);
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    height: 80vh;
+  }
+  
+  .logo_title {
+    font-size: 2.5rem;
+  }
+  
+  .logo_subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about_us_items {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .parallax {
+    transform: scale(1.45);
+    margin-top: 30px;
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .sales_head {
+    font-size: 3rem;
+  }
+  
+  .sales_title {
+    font-size: 1.8rem;
+  }
+  
+  .sales_subtitle {
+    font-size: 1.2rem;
+  }
+  
+  #signupButtonSale {
+    width: 20%;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-contant, .footer-nav {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-column {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60vh;
+  }
+  
+  .logo_title {
+    font-size: 2rem;
+  }
+  
+  .logo_subtitle {
+    font-size: 1rem;
+  }
+  
+  .modal-content {
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .about_title {
+    font-size: 2.2rem;
+  }
+  
+  .about_subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .sales {
+    height: auto;
+    padding: 40px 20px;
+  }
+  
+  .sales_head {
+    font-size: 2.5rem;
+  }
+  
+  .sales_title {
+    font-size: 1.5rem;
+  }
+  
+  #signupButtonSale {
+    width: 30%;
+  }
+  
+.support-item {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .support-title {
+    font-size: 1.8rem;
+  }
+  
+  .support-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .support-mobile img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-column {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+  }
+  .logo_inner{
+    padding-top: 35px;
+    padding-right: 30px;
+  }
+  .logo_title {
+    font-size: 1.8rem;
+  }
+  .logo_subtitle{
+    font-size: 1rem;
+  }
+  .button {
+    padding: 15px 32px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+  
+
+  .about_us{
+    flex-direction: column;
+    padding: 20px 10px;
+    height: 60vh;
+  }
+  .about_title {
+    font-size: 2rem;
+  }
+  
+  .about_subtitle {
+    font-size: 1.2rem;
+  }
+  .parallax{
+    display: none;
+  }
+  .sales_head {
+    font-size: 2rem;
+  }
+  
+  .sales_title {
+    font-size: 1.2rem;
+  }
+  
+  #signupButtonSale {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+  
+  .support-title {
+    font-size: 1.8rem;
+  }
+    
+  .support-mobile .support-title {
+    font-size: 1.6rem;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+  .footer-contant{
+    display: none;
+  }
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .nav-column {
+    margin: 10px 0;
+  }
+}

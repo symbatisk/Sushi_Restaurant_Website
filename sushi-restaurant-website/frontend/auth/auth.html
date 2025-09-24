@@ -1,0 +1,103 @@
+<div class="intro">
+  <a class="heading" href="home.html">Restaurant</a>
+  <div class="nav-container">
+    <nav class="nav">
+      <div class="nav-links">
+        <a class="nav_link" href="about_us.html">About us</a>
+        <a class="nav_link" href="menu.html">Menu</a>
+        <a class="nav_link" href="contact.html">Contact us</a>
+        <a class="nav_link" href="faq.html">FAQ</a>
+      </div>
+      <div class="nav-icons">
+        <div id="cartToggle" class="cart-button">🛒<span id="cartCount">0</span></div>
+        <div id="userIcon" class="user-icon">👤</div>
+        <div class="auth-buttons">
+          <button id="openSigninModal" class="signup-button">Sign In</button>
+        </div>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <button class="close-sidebar" id="closeSidebar">&times;</button>
+  <a class="nav_link" href="about_us.html">About us</a>
+  <a class="nav_link" href="menu.html">Menu</a>
+  <a class="nav_link" href="contact.html">Contact us</a>
+  <a class="nav_link" href="faq.html">FAQ</a>
+</div>
+
+  <div id="signupModal" class="modal"> <!-- Sign Up Modal -->
+    <div class="modal-content">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <label>First Name: <input type="text" name="first_name" placeholder="First Name" required></label>
+        <label>Last Name: <input type="text" name="last_name" placeholder="Last Name" required></label>
+        <label>Contact Email: <input type="email" name="contact_email" placeholder="Contact Email" required></label>
+        <label for="psw">Password:
+          <input type="password" id="psw" name="password" placeholder="Minimum 8 characters.." pattern=".{8,}" required>
+        </label>
+        <div id="message">
+          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        </div>
+        <label><input type="checkbox" checked name="remember" style="margin-bottom:15px"> Remember me</label>
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <div class="clearfix">
+          <button type="button" onclick="signupModal.style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Sign In Modal -->
+  <div id="signinModal" class="modal">
+    <div class="modal-content">
+      <h2>Sign In</h2>
+      <form id="signinForm">
+        <label>Email: <input type="email" name="signin_email" required></label>
+        <label>Password: <input type="password" name="signin_password" required></label>
+        <div class="clearfix">
+          <button type="button" onclick="signinModal.style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign In</button>
+        </div>
+        <p style="text-align:center; margin-top: 20px;">
+          Don't have an account? <a href="#" id="switchToSignup" style="color: dodgerblue;">Create one</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  
+
+
+  
+  <!-- Overlay + Sidebar -->
+  <div id="overlay"></div>
+  <div id="accountSidebar">
+    <h2 id="welcomeUser">Welcome!</h2>
+    <ul class="account-menu">
+        <li><a href="account.html#order-history"> 📦 Order History</a></li>
+        <li><a href="account.html#addresses"> 🏠 Addresses</a></li>
+        <li><a href="account.html#payment-details">  💳 Payment Details</a></li>
+        <li><a href="account.html#settings"> ⚙️ Settings</a></li>
+        <li id="logoutBtn">🚪 Log Out</li>
+      </ul>      
+  </div>
+
+  <div id="cartSidebar" class="cart-sidebar">
+  <h2>🛒 Your Cart</h2>
+  <div id="cartItems"></div>
+  <div class="cart-total-section">
+    <p>Total: <span id="cartTotal">0£</span></p>
+    <a href="checkout.html" id="checkoutBtn"disabled>Proceed to Checkout</a>
+  </div>
+  <button class="close-cart">&times;</button>
+
+</div>
+<div id="cartOverlay" class="cart-overlay"></div>
+  

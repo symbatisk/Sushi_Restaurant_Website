@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="Css/cart.css">
+  <link rel="stylesheet" href="auth/auth.css">
+  <link rel="stylesheet" href="Css/checkout.css">
+
+<body>
+  <header>
+    <div class="header">
+      <div class="container">
+        <div id="header-placeholder"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="checkout-container">
+    <h1 class="checkout-title">Checkout</h1>
+
+    <div class="checkout-wrapper">
+      <!-- Left column - Form -->
+      <div class="checkout-form">
+
+        <!-- Billing Address -->
+        <div class="card">
+        <h2>Billing Address</h2>
+        <div id="addressSection">
+        <h3>Saved Addresses</h3>
+        <div id="savedAddresses" class="address-list"></div>
+        
+        <div class="address-buttons">
+          <button id="showAddressForm">+ Add New Address</button>
+          <button id="hideAddressForm" style="display:none;">Cancel New Address</button>
+        </div>
+
+          <form id="addressForm" style="display:none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+              </div>
+            </div>
+            
+            <div class="form-group phone-wrapper">
+              <label>Phone Number</label>
+              <input type="tel" name="phone_number" maxlength="10" placeholder="7911 123456" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Email <span style="font-weight:normal">(Optional)</span></label>
+              <input type="email" name="contact_email" placeholder="you@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" name="address_line1" placeholder="1234 Main St" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Address 2 <span style="font-weight:normal">(Optional)</span></label>
+              <input type="text" name="address_line2" placeholder="Apartment or suite">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" name="city" placeholder="London" required>
+              </div>
+              
+               
+              <div class="form-group">
+                <label>Zip</label>
+                <input type="text" name="postcode" placeholder="" required>
+                <p id="deliveryTime" style="color:green; font-weight:bold;"></p>
+              </div>
+            </div>
+          </form>
+          
+           <!-- Checkbox: Same as Billing -->
+            <div class="checkbox-group">
+              <input type="checkbox" id="sameAsBilling" checked>
+              <label for="sameAsBilling" style="font-weight:normal">Shipping address is the same as my billing address</label>
+              <p id="deliveryTime" style="color:green; font-weight:bold;"></p>
+            </div>
+            
+            <!-- Billing address toggle -->
+            <div class="billing-address" id="billingAddress" style="display: none;">
+              <h3>Billing Address</h3>
+              
+              <div class="form-row">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" name="billing_first_name">
+                  </div>
+                  <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" name="billing_last_name">
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                  <label>Address</label>
+                  <input type="text" name="billing_line1" placeholder="1234 Main St">
+              </div>
+              
+              <div class="form-group">
+                  <label>Address 2 <span style="font-weight:normal">(Optional)</span></label>
+                  <input type="text" name="billing_line2" placeholder="Apartment or suite">
+              </div>
+              
+              <div class="form-row">
+                  <div class="form-group">
+                      <label>City</label>
+                      <input type="text" name="billing_city" placeholder="London">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label>Postcode</label>
+                      <input type="text" name="billing_postcode" placeholder="">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Payment -->
+        <div class="card">
+          <h2>Payment</h2>
+          <form id="paymentForm">
+            <div class="payment-method">
+              <div class="checkbox-group">
+                <input type="radio" id="credit" name="paymentMethod" value="credit" checked>
+                <label for="credit">Credit card</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="radio" id="debit" name="paymentMethod" value="debit">
+                <label for="debit">Debit card</label>
+              </div>
+              <div class="checkbox-group">
+                <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                <label for="paypal">Paypal</label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Name on card</label>
+              <input type="text" name="cardname" placeholder="Full name as displayed on card" required>
+            </div>
+            
+            <div class="form-group">
+              <label>Credit card number</label>
+              <input type="text" name="cardnumber" placeholder="0000 0000 0000 0000" required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Expiration</label>
+                <input type="text" name="expiration" placeholder="MM/YY" required>
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" name="cvv" placeholder="CVV" required>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Confirmation Button -->
+        <button class="confirm-btn" type="button">Continue to checkout</button>
+      </div>
+
+      <!-- Right column - Cart -->
+      <div class="order-summary card">
+        <div class="cart-header">
+          <h3>Your cart</h3>
+          <span class="badge"></span>
+        </div>
+        <!-- Dynamic items -->
+      <div class="cart-items"></div>
+      
+      <!-- Static promo code block -->
+      <div class="promo-code">
+        <div class="cart-item">
+          <div class="cart-item-name">Promo code</div>
+          <div class="cart-item-price">-£5</div>
+        </div>
+        <div class="cart-item-desc">EXAMPLE CODE</div>
+        <div class="promo-code-row">
+          <input type="text" placeholder="Promo code">
+          <button>Redeem</button>
+        </div>
+      </div>
+  
+        <!-- Order summary -->
+        <div class="summary-line">
+          <span>Subtotal:</span>
+          <span id="subtotal">£0</span>
+        </div>
+        <div class="summary-line">
+          <span>Delivery:</span>
+          <span id="deliveryPrice">£0</span>
+        </div>
+        <div class="summary-line total">
+          <span>Total:</span>
+          <span id="orderTotal">£0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!--Footer Section-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-contant">
+                        <h1>GrandRestaurant</h1>
+                        <p>Discover fresh sushi delights with authentic flavors. Reserve your table for an unforgettable culinary experience today. Immerse yourself in the serene ambiance and attentive service for an unforgettable Japanese dining experience in the heart of the city.</p>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Our Service</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="about_us.html">About Us</a>
+                            <a class="nav_link_footer" href="#">Our Work</a>
+                            <a class="nav_link_footer" href="#">Help Center</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Company</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Terms of Use</a>
+                            <a class="nav_link_footer" href="contact.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="footer-contant-links">
+                        <p class="link-title">Follow Us</p>
+                        <div class="navigator">
+                            <a class="nav_link_footer" href="#">Facebook</a>
+                            <a class="nav_link_footer" href="#">Instagram</a>
+                            <a class="nav_link_footer" href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+  <script type="module" src="auth/auth.js"></script>
+  <script type="module" src="js/checkout.js" defer></script>
+</body>
+</html>
