@@ -4,7 +4,7 @@ let isAuthenticated = false;
 
 const API_BASE = window.location.origin.includes("localhost")
   ? "http://localhost:5001"
-  : "https://sushi-restaurant-website-0z5c.onrender.com";
+  : "https://sushi-restaurant-website-ay7f.onrender.com";
 
 
 // load user profile

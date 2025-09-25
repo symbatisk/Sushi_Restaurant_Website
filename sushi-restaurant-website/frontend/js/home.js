@@ -17,3 +17,17 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   imagModal.style.display = "none";
 };
+
+function openSignupModal() {
+        document.getElementById('signupModal').style.display = 'block';
+    }
+      
+    document.addEventListener('DOMContentLoaded', function() {
+        const signupLink = document.getElementById('openSignupModalLink');
+        if (signupLink) {
+            signupLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openSignupModal();
+            });
+        }
+    });
