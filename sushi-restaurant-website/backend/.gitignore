@@ -6,6 +6,8 @@
 .env.production
 
 .DS_Store
+sushi-restaurant-website/node_modules
+sushi-restaurant-website/node_modules/
 node_modules
 node_modules/
 dist/
