@@ -4,7 +4,7 @@ A modern and fully functional website for a sushi restaurant, featuring online o
 
 
 # Live Demo
-(https://sushi-restaurant-website-ay7f.onrender.com)
+https://sushi-restaurant-website-ay7f.onrender.com
 
 
 ## Project Goals
