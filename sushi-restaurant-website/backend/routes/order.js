@@ -68,7 +68,7 @@ router.post("/", authenticateUser, async (req, res) => {
       
       const existingAddress = await Address.findOne({
         userId: userId,
-        line1: addressData.street || addressData.line1,
+        line1: addressData.street || addressData.line1 || addressData.address_line1,
         city: addressData.city,
         postcode: addressData.zip_code || addressData.postcode
       });
@@ -77,7 +77,7 @@ router.post("/", authenticateUser, async (req, res) => {
         const newAddress = new Address({
         userId: userId,
         name: `${addressData.first_name} ${addressData.last_name}`,
-        line1: addressData.street || addressData.line1,
+        line1: addressData.street || addressData.line1, addressData.address_line1 || "",
         line2: addressData.line2 || "",
         city: addressData.city,
         postcode: addressData.zip_code || addressData.postcode,
@@ -91,7 +91,7 @@ router.post("/", authenticateUser, async (req, res) => {
 
     if (userId && orderData.payment) {
   try {
-    // Проверяем, что все необходимые поля присутствуют
+
     if (orderData.payment.last4 && orderData.payment.exp_month && orderData.payment.exp_year) {
       // Check if payment method already exists
       const existingPaymentMethod = await PaymentMethod.findOne({
@@ -119,7 +119,7 @@ router.post("/", authenticateUser, async (req, res) => {
     }
   } catch (paymentError) {
     console.error("Error saving payment method:", paymentError);
-    // Не прерываем выполнение из-за ошибки сохранения платежного метода
+    
   }
 }  
    res.json({
@@ -130,8 +130,7 @@ router.post("/", authenticateUser, async (req, res) => {
     });
   } catch (err) {
     console.error("Error saving order:", err);
-    
-    // Используем order только если он был определен
+
     const orderId = order ? order.orderId : "unknown";
     const order_id = order ? order._id : "unknown";
     
